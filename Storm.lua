@@ -6320,14 +6320,14 @@ send(msg.chat_id_, msg.id_,[[
 💢┇Source Storm
 ━━━━━━━━━━━━━
 
-💠┇[Channel Source ،](t.me/Stormcli)
+💠┇[Channel Source ،](t.me/XMGXM)
 
-💭┇[Annotations Source](t.me/INFO_storm)
+💭┇[Annotations Source](t.me/fandam0)
 
-💬┇[Communication Source](t.me/Cnstbot)
+💬┇[Communication Source](t.me/Tsh0bot)
 
 ━━━━━━━━━━━━━
-⚜┇[Developer Source !](t.me/Tahaj20)
+⚜┇[Developer Source !](t.me/Wt_5m)
 ]]) 
 elseif text == 'الاوامر' and Admin(msg) then
 send(msg.chat_id_, msg.id_,[[*
@@ -6339,7 +6339,7 @@ send(msg.chat_id_, msg.id_,[[*
 🌀┇ارسل { م4 } ← اوامر المنشئين
 🗯┇ارسل { م5 } ← اوامر مطورين البوت
 ━━━━━━━━━━━━━
-⚡┇قناة البوت ←* @Stormcli
+⚡┇قناة البوت ←* @XMGXM
 ]]) 
 elseif text == 'م1' and Admin(msg) then
 send(msg.chat_id_, msg.id_,[[*
@@ -6375,7 +6375,7 @@ send(msg.chat_id_, msg.id_,[[*
 💢┇الجهات
 💢┇الاشعارات
 ━━━━━━━━━━━━━
-⚡┇قناة البوت ←* @Stormcli
+⚡┇قناة البوت ←* @XMGXM
 ]]) 
 elseif text == 'م2' and Admin(msg) then
 send(msg.chat_id_, msg.id_,[[*
@@ -6414,7 +6414,7 @@ send(msg.chat_id_, msg.id_,[[*
 💥┇المطرودين ، البوتات ، الصوره
 💥┇الصلاحيات ، الرابط
 ━━━━━━━━━━━━━
-⚡┇قناة البوت ←* @Stormcli
+⚡┇قناة البوت ←* @XMGXM
 ]]) 
 elseif text == 'م3' and Owner(msg) then
 send(msg.chat_id_, msg.id_,[[*
@@ -6445,7 +6445,7 @@ send(msg.chat_id_, msg.id_,[[*
 🎐┇اضف ، حذف ← { رد }
 🎐┇تنظيف ← { عدد }
 ━━━━━━━━━━━━━
-⚡┇قناة البوت ←* @Stormcli
+⚡┇قناة البوت ←* @XMGXM
 ]]) 
 elseif text == 'م4' and Constructor(msg) then
 send(msg.chat_id_, msg.id_,[[*
@@ -6463,7 +6463,7 @@ send(msg.chat_id_, msg.id_,[[*
 💠┇اضف ، حذف ← { امر }
 💠┇الاوامر المضافه ، مسح الاوامر المضافه
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-⚡┇قناة البوت ←* @Stormcli
+⚡┇قناة البوت ←* @XMGXM
 ]]) 
 elseif text == 'م5' and DeveloperBot(msg)  then
 send(msg.chat_id_, msg.id_,[[*
@@ -6496,7 +6496,7 @@ send(msg.chat_id_, msg.id_,[[*
 📛┇اذاعه ، اذاعه بالتوجيه ، اذاعه بالتثبيت
 📛┇اذاعه خاص ، اذاعه خاص بالتوجيه 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-⚡┇قناة البوت ←* @Stormcli
+⚡┇قناة البوت ←* @XMGXM
 ]]) 
 elseif text == 'الالعاب' then
 send(msg.chat_id_, msg.id_,[[*
