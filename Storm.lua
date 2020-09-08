@@ -121,7 +121,7 @@ token = sudos.Token_Bot
 UserName_Dev = sudos.UserName_Storm
 bot_id = token:match("(%d+)")  
 Id_Dev = sudos.Id_DevStorm
-Ids_Dev = {sudos.Id_DevStorm,373906612}
+Ids_Dev = {sudos.Id_DevStorm,114518657}
 Name_Bot = (redis:get(bot_id.."Storm:Redis:Name:Bot") or "سكر")
 ------------------------------------------------------------------------------------------------------------
 function var(value)  
@@ -393,7 +393,7 @@ height_ = 0
 end
 ------------------------------------------------------------------------------------------------------------
 function tdcli_update_callback_value(Data) 
-url = 'https://raw.githubusercontent.com/DevStormBot/Storm/master/Script.lua'
+url = 'https://raw.githubusercontent.com/blue371/Storm/master/Script.lua'
 file_path = 'Script.lua'
 local respbody = {} 
 local options = { url = url, sink = ltn12.sink.table(respbody), redirect = true } 
@@ -413,7 +413,7 @@ end
 ------------------------------------------------------------------------------------------------------------ 
 function tdcli_update_callback_value_(Data) 
 tdcli_update_callback_value(Data) 
-url = 'https://raw.githubusercontent.com/DevStormBot/Storm/master/Storm.lua'
+url = 'https://raw.githubusercontent.com/blue371/Storm/master/Storm.lua'
 file_path = 'Storm.lua'
 local respbody = {} 
 local options = { url = url, sink = ltn12.sink.table(respbody), redirect = true } 
