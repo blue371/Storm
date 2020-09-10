@@ -2034,7 +2034,7 @@ Files = '⚠┇ لا توجد ملفات في البوت '
 end
 send(msg.chat_id_, msg.id_,Files)
 elseif text == "متجر الملفات" or text == 'المتجر' then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/DevStormBot/StormFile/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/blue371/StormFile/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 if Get_info then
