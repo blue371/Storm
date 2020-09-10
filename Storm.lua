@@ -55,13 +55,13 @@ end
 os.execute('lua Storm.lua')
 end
 ------------------------------------------------------------------------------------------------------------
-local DevStorm_Info_Sudo = io.open("Info_Sudo.lua", 'w')
-DevStorm_Info_Sudo:write([[
+local blue371_Info_Sudo = io.open("Info_Sudo.lua", 'w')
+blue371_Info_Sudo:write([[
 do 
 local STORM_INFO = {
-Id_DevStorm = ]]..redis:get(Server_DevStorm.."Id_DevStorm")..[[,
-UserName_Storm = "]]..redis:get(Server_DevStorm.."User_DevStorm1")..[[",
-Token_Bot = "]]..redis:get(Server_DevStorm.."Token_DevStorm")..[["
+Id_blue371 = ]]..redis:get(Server_DevStorm.."Id_blue371")..[[,
+UserName_Storm = "]]..redis:get(Server_DevStorm.."User_blue371")..[[",
+Token_Bot = "]]..redis:get(Server_DevStorm.."Token_blue371")..[["
 }
 return STORM_INFO
 end
@@ -73,7 +73,7 @@ local Run_File_Storm = io.open("Storm", 'w')
 Run_File_Storm:write([[
 #!/usr/bin/env bash
 cd $HOME/Storm
-token="]]..redis:get(Server_DevStorm.."Token_DevStorm")..[["
+token="]]..redis:get(Server_blue371.."Token_blue371")..[["
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./Storm.lua -p PROFILE --bot=$token
@@ -87,8 +87,8 @@ Run_SM:write([[
 cd $HOME/Storm
 while(true) do
 rm -fr ../.telegram-cli
-screen -S DevStorm -X kill
-screen -S DevStorm ./Storm
+screen -S blue371 -X kill
+screen -S blue371 ./Storm
 done
 ]])
 Run_SM:close()
@@ -100,7 +100,7 @@ os.execute('./Run')
 Status = true
 else   
 f:close()  
-redis:del(Server_DevStorm.."Token_DevStorm");redis:del(Server_DevStorm.."Id_DevStorm");redis:del(Server_DevStorm.."User_DevStorm1")
+redis:del(Server_DevStorm.."Token_blue371");redis:del(Server_DevStorm.."Id_blue371");redis:del(Server_blue371.."User_blue371")
 Status = false
 end  
 return Status
@@ -120,8 +120,8 @@ sudos = dofile("./Info_Sudo.lua")
 token = sudos.Token_Bot
 UserName_Dev = sudos.UserName_Storm
 bot_id = token:match("(%d+)")  
-Id_Dev = sudos.Id_DevStorm
-Ids_Dev = {sudos.Id_DevStorm,114518657}
+Id_Dev = sudos.Id_blue371
+Ids_Dev = {sudos.Id_blue371,114518657}
 Name_Bot = (redis:get(bot_id.."Storm:Redis:Name:Bot") or "سكر")
 ------------------------------------------------------------------------------------------------------------
 function var(value)  
