@@ -2034,7 +2034,7 @@ Files = '⚠┇ لا توجد ملفات في البوت '
 end
 send(msg.chat_id_, msg.id_,Files)
 elseif text == "متجر الملفات" or text == 'المتجر' then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/blue371/StormFile/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/DevStormBot/StormFile/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 if Get_info then
@@ -2074,7 +2074,7 @@ end
 elseif text and text:match("^(تفعيل ملف) (.*)(.lua)$") then
 local File_Get = {string.match(text, "^(تفعيل ملف) (.*)(.lua)$")}
 local File_Name = File_Get[2]..'.lua'
-local Get_Json, Res = https.request("https://raw.githubusercontent.com/blue371/StormFile/master/plugins_/"..File_Name)
+local Get_Json, Res = https.request("https://raw.githubusercontent.com/DevStormBot/StormFile/master/plugins_/"..File_Name)
 if Res == 200 then
 local ChekAuto = io.open("Files/"..File_Name,'w+')
 ChekAuto:write(Get_Json)
@@ -2162,7 +2162,7 @@ if text == 'تفعيل' and DeveloperBot(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 if TypeForChat ~= 'ForSuppur' then
@@ -2221,7 +2221,7 @@ if text == 'تعطيل' and DeveloperBot(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
@@ -2265,7 +2265,7 @@ if text == 'تفعيل' and not DeveloperBot(msg) and not redis:get(bot_id..'Sto
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 if TypeForChat ~= 'ForSuppur' then
@@ -2339,7 +2339,7 @@ if text == '/start' then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 if Dev_Storm(msg) then
@@ -2800,7 +2800,7 @@ if text == 'جلب نسخه احتياطيه' and Dev_Storm(msg) or text == 'ج�
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 local Groups = redis:smembers(bot_id..'Storm:ChekBotAdd')  
@@ -2892,7 +2892,7 @@ if text == ("مسح قائمه العام") and Dev_Storm(msg) or text == ("مس
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:del(bot_id.."Storm:Removal:User:Groups")
@@ -2901,7 +2901,7 @@ elseif text == ("مسح المطورين") and Dev_Storm(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:del(bot_id.."Storm:Developer:Bot")
@@ -2910,7 +2910,7 @@ elseif text == ("مسح المنشئين الاساسين") and DeveloperBot(msg
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:del(bot_id.."Storm:President:Group"..msg.chat_id_)
@@ -2921,7 +2921,7 @@ if da.status_.ID == "ChatMemberStatusCreator" then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:del(bot_id.."Storm:President:Group"..msg.chat_id_)
@@ -2932,7 +2932,7 @@ elseif text == ("مسح المنشئين") and PresidentGroup(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:del(bot_id.."Storm:Constructor:Group"..msg.chat_id_)
@@ -2941,7 +2941,7 @@ elseif text == ("مسح المدراء") and Constructor(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:del(bot_id.."Storm:Manager:Group"..msg.chat_id_)
@@ -2950,7 +2950,7 @@ elseif text == ("مسح الادمنيه") and Owner(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:del(bot_id.."Storm:Admin:Group"..msg.chat_id_)
@@ -2959,7 +2959,7 @@ elseif text == ("مسح المميزين") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:del(bot_id.."Storm:Vip:Group"..msg.chat_id_)
@@ -2968,7 +2968,7 @@ elseif text == ("مسح المكتومين") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:del(bot_id.."Storm:Silence:User:Group"..msg.chat_id_)
@@ -2977,7 +2977,7 @@ elseif text == ("مسح المحظورين") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:del(bot_id.."Storm:Removal:User:Group"..msg.chat_id_)
@@ -2986,7 +2986,7 @@ elseif text == "حذف الاوامر المضافه" and Constructor(msg) or te
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 local list = redis:smembers(bot_id.."Storm:Command:List:Group"..msg.chat_id_)
@@ -2999,7 +2999,7 @@ elseif text == "مسح الصلاحيات" and Constructor(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 local list = redis:smembers(bot_id.."Storm:Validitys:Group"..msg.chat_id_)
@@ -3009,7 +3009,7 @@ elseif text == ("قائمه العام") and Dev_Storm(msg) or text == ("الم�
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 local list = redis:smembers(bot_id.."Storm:Removal:User:Groups")
@@ -3030,7 +3030,7 @@ elseif text == ("المطورين") and Dev_Storm(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 local list = redis:smembers(bot_id.."Storm:Developer:Bot")
@@ -3051,7 +3051,7 @@ elseif text == "المنشئين الاساسين" and DeveloperBot(msg) or text
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 local list = redis:smembers(bot_id.."Storm:President:Group"..msg.chat_id_)
@@ -3074,7 +3074,7 @@ if da.status_.ID == "ChatMemberStatusCreator" then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 local list = redis:smembers(bot_id.."Storm:President:Group"..msg.chat_id_)
@@ -3097,7 +3097,7 @@ elseif text == ("المنشئين") and PresidentGroup(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 local list = redis:smembers(bot_id.."Storm:Constructor:Group"..msg.chat_id_)
@@ -3118,7 +3118,7 @@ elseif text == ("المدراء") and Constructor(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 local list = redis:smembers(bot_id.."Storm:Manager:Group"..msg.chat_id_)
@@ -3139,7 +3139,7 @@ elseif text == ("الادمنيه") and Owner(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 local list = redis:smembers(bot_id.."Storm:Admin:Group"..msg.chat_id_)
@@ -3251,7 +3251,7 @@ elseif text == ("حظر عام") and tonumber(msg.reply_to_message_id_) ~= 0 and
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3272,7 +3272,7 @@ elseif text == ("الغاء العام") and tonumber(msg.reply_to_message_id_) 
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3284,7 +3284,7 @@ elseif text == ("اضف مطور") and tonumber(msg.reply_to_message_id_) ~= 0 a
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3296,7 +3296,7 @@ elseif text == ("حذف مطور") and tonumber(msg.reply_to_message_id_) ~= 0 a
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3308,7 +3308,7 @@ elseif text == ("رفع منشئ اساسي") and tonumber(msg.reply_to_message_
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3320,7 +3320,7 @@ elseif text == ("تنزيل منشئ اساسي") and tonumber(msg.reply_to_mess
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3332,7 +3332,7 @@ elseif text == ("رفع منشئ اساسي") and tonumber(msg.reply_to_message_
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
@@ -3350,7 +3350,7 @@ if da.status_.ID == "ChatMemberStatusCreator" then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3364,7 +3364,7 @@ elseif text == "رفع منشئ" and tonumber(msg.reply_to_message_id_) ~= 0 and
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3376,7 +3376,7 @@ elseif text and text:match("^تنزيل منشئ$") and tonumber(msg.reply_to_me
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3388,7 +3388,7 @@ elseif text == ("رفع مدير") and tonumber(msg.reply_to_message_id_) ~= 0 a
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3400,7 +3400,7 @@ elseif text == ("تنزيل مدير") and tonumber(msg.reply_to_message_id_) ~=
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3412,7 +3412,7 @@ elseif text == ("رفع ادمن") and tonumber(msg.reply_to_message_id_) ~= 0 a
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 if not Constructor(msg) and redis:get(bot_id.."Storm:Cheking:Seted"..msg.chat_id_) then 
@@ -3428,7 +3428,7 @@ elseif text == ("تنزيل ادمن") and tonumber(msg.reply_to_message_id_) ~=
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3440,7 +3440,7 @@ elseif text == ("رفع مميز") and tonumber(msg.reply_to_message_id_) ~= 0 a
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 if not Constructor(msg) and redis:get(bot_id.."Storm:Cheking:Seted"..msg.chat_id_) then 
@@ -3456,7 +3456,7 @@ elseif text == ("تنزيل مميز") and tonumber(msg.reply_to_message_id_) ~=
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3468,7 +3468,7 @@ elseif text == ("حظر") and msg.reply_to_message_id_ ~= 0 and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 if not Constructor(msg) and redis:get(bot_id.."Storm:Lock:Ban:Group"..msg.chat_id_) then 
@@ -3499,7 +3499,7 @@ elseif text == ("الغاء حظر") and tonumber(msg.reply_to_message_id_) ~= 0
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3516,7 +3516,7 @@ elseif text == ("كتم") and msg.reply_to_message_id_ ~= 0 and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 if msg.can_be_deleted_ == false then 
@@ -3536,7 +3536,7 @@ elseif text == ("الغاء كتم") and tonumber(msg.reply_to_message_id_) ~= 0
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3548,7 +3548,7 @@ elseif text == ("الغاء تقيد") and tonumber(msg.reply_to_message_id_) ~=
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3565,7 +3565,7 @@ elseif text == ("تقيد") and tonumber(msg.reply_to_message_id_) ~= 0 and Admi
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3585,7 +3585,7 @@ elseif text and text:match("^حظر عام @(.*)$") and Dev_Storm(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3613,7 +3613,7 @@ elseif text and text:match("^الغاء العام @(.*)$") and Dev_Storm(msg) t
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3629,7 +3629,7 @@ elseif text and text:match("^اضف مطور @(.*)$") and Dev_Storm(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3649,7 +3649,7 @@ elseif text and text:match("^حذف مطور @(.*)$") and Dev_Storm(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3665,7 +3665,7 @@ elseif text and text:match("^رفع منشئ اساسي @(.*)$") and DeveloperBo
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3685,7 +3685,7 @@ elseif text and text:match("^تنزيل منشئ اساسي @(.*)$") and Develop
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3703,7 +3703,7 @@ if da.status_.ID == "ChatMemberStatusCreator" then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3728,7 +3728,7 @@ if da.status_.ID == "ChatMemberStatusCreator" then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -3747,7 +3747,7 @@ elseif text and text:match("^رفع منشئ @(.*)$") and PresidentGroup(msg) th
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3767,7 +3767,7 @@ elseif text and text:match("^تنزيل منشئ @(.*)$") and PresidentGroup(msg
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3783,7 +3783,7 @@ elseif text and text:match("^رفع مدير @(.*)$") and Constructor(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3803,7 +3803,7 @@ elseif text and text:match("^تنزيل مدير @(.*)$") and Constructor(msg) t
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3819,7 +3819,7 @@ elseif text and text:match("^رفع ادمن @(.*)$") and Owner(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 if not Constructor(msg) and redis:get(bot_id.."Storm:Cheking:Seted"..msg.chat_id_) then 
@@ -3843,7 +3843,7 @@ elseif text and text:match("^تنزيل ادمن @(.*)$") and Owner(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3859,7 +3859,7 @@ elseif text and text:match("^رفع مميز @(.*)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 if not Constructor(msg) and redis:get(bot_id.."Storm:Cheking:Seted"..msg.chat_id_) then 
@@ -3883,7 +3883,7 @@ elseif text and text:match("^تنزيل مميز @(.*)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 function FunctionStatus(arg, result)
@@ -3985,7 +3985,7 @@ elseif text and text:match("^حظر @(.*)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 if not Constructor(msg) and redis:get(bot_id.."Storm:Lock:Ban:Group"..msg.chat_id_) then 
@@ -4024,7 +4024,7 @@ elseif text and text:match("^الغاء حظر @(.*)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -4045,7 +4045,7 @@ elseif text and text:match("^كتم @(.*)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 if msg.can_be_deleted_ == false then 
@@ -4073,7 +4073,7 @@ elseif text and text:match("^الغاء كتم @(.*)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -4089,7 +4089,7 @@ elseif text and text:match("^تقيد @(.*)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -4153,7 +4153,7 @@ elseif text and text:match("^الغاء تقيد @(.*)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 function FunctionStatus(arg, result)
@@ -4173,7 +4173,7 @@ elseif text and text:match("^طرد @(.*)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 if msg.can_be_deleted_ == false then 
@@ -4211,7 +4211,7 @@ elseif text and text:match("^حظر عام (%d+)$") and Dev_Storm(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 if Dev_Storm_User(text:match("^حظر عام (%d+)$")) == true then
@@ -4228,7 +4228,7 @@ elseif text and text:match("^الغاء العام (%d+)$") and Dev_Storm(msg) t
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:srem(bot_id.."Storm:Removal:User:Groups", text:match("^الغاء العام (%d+)$"))
@@ -4239,7 +4239,7 @@ if text and text:match("^اضف مطور (%d+)$") and Dev_Storm(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:sadd(bot_id.."Storm:Developer:Bot", text:match("^اضف مطور (%d+)$"))
@@ -4248,7 +4248,7 @@ elseif text and text:match("^حذف مطور (%d+)$") and Dev_Storm(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:srem(bot_id.."Storm:Developer:Bot", text:match("^حذف مطور (%d+)$"))
@@ -4257,7 +4257,7 @@ elseif text and text:match("^رفع منشئ اساسي (%d+)$") and DeveloperBo
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 redis:sadd(bot_id.."Storm:President:Group"..msg.chat_id_, text:match("^رفع منشئ اساسي (%d+)$") )
@@ -4266,7 +4266,7 @@ elseif text and text:match("^تنزيل منشئ اساسي (%d+)$") and Develop
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 redis:srem(bot_id.."Storm:President:Group"..msg.chat_id_, text:match("^تنزيل منشئ اساسي (%d+)$") )
@@ -4275,7 +4275,7 @@ elseif text and text:match("^رفع منشئ (%d+)$") and PresidentGroup(msg) th
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 redis:sadd(bot_id.."Storm:Constructor:Group"..msg.chat_id_, text:match("^رفع منشئ (%d+)$"))
@@ -4284,7 +4284,7 @@ elseif text and text:match("^تنزيل منشئ (%d+)$") and PresidentGroup(msg
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 redis:srem(bot_id.."Storm:Constructor:Group"..msg.chat_id_, text:match("^تنزيل منشئ (%d+)$"))
@@ -4293,7 +4293,7 @@ elseif text and text:match("^رفع مدير (%d+)$") and Constructor(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 redis:sadd(bot_id.."Storm:Manager:Group"..msg.chat_id_, text:match("^رفع مدير (%d+)$") )
@@ -4302,7 +4302,7 @@ elseif text and text:match("^تنزيل مدير (%d+)$") and Constructor(msg) t
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 redis:srem(bot_id.."Storm:Manager:Group"..msg.chat_id_, text:match("^تنزيل مدير (%d+)$") )
@@ -4311,7 +4311,7 @@ elseif text and text:match("^رفع ادمن (%d+)$") and Owner(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 if not Constructor(msg) and redis:get(bot_id.."Storm:Cheking:Seted"..msg.chat_id_) then 
@@ -4324,7 +4324,7 @@ elseif text and text:match("^تنزيل ادمن (%d+)$") and Owner(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 redis:srem(bot_id.."Storm:Admin:Group"..msg.chat_id_, text:match("^تنزيل ادمن (%d+)$"))
@@ -4333,7 +4333,7 @@ elseif text and text:match("^رفع مميز (%d+)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 if not Constructor(msg) and redis:get(bot_id.."Storm:Cheking:Seted"..msg.chat_id_) then 
@@ -4346,7 +4346,7 @@ elseif text and text:match("^تنزيل مميز (%d+)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end 
 redis:srem(bot_id.."Storm:Vip:Group"..msg.chat_id_, text:match("^تنزيل مميز (%d+)$") )
@@ -4355,7 +4355,7 @@ elseif text and text:match("^حظر (%d+)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 if not Constructor(msg) and redis:get(bot_id.."Storm:Lock:Ban:Group"..msg.chat_id_) then 
@@ -4383,7 +4383,7 @@ elseif text and text:match("^الغاء حظر (%d+)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 if tonumber(text:match("^الغاء حظر (%d+)$") ) == tonumber(bot_id) then
@@ -4397,7 +4397,7 @@ elseif text and text:match("^كتم (%d+)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 if Rank_Checking(text:match("^كتم (%d+)$"), msg.chat_id_) == true then
@@ -4418,7 +4418,7 @@ elseif text and text:match("^الغاء كتم (%d+)$") and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end
 redis:srem(bot_id.."Storm:Silence:User:Group"..msg.chat_id_,text:match("^الغاء كتم (%d+)$") )
@@ -4971,7 +4971,7 @@ elseif text ==("تثبيت") and msg.reply_to_message_id_ ~= 0 and Admin(msg) th
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end  
 if redis:sismember(bot_id.."Storm:Lock:pin",msg.chat_id_) and not Constructor(msg) then
@@ -4990,7 +4990,7 @@ elseif text == "الغاء التثبيت" and Admin(msg) then
 local url,res = https.request('https://teamstorm.tk/ch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_Storm ~= true then
-send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @Stormcli }')   
+send(msg.chat_id_,msg.id_,'\n📌┇عليك الاشتراك في قناة البوت \n💢┇قناة البوت ← { @XMGXM }')   
 return false 
 end  
 if redis:sismember(bot_id.."Storm:Lock:pin",msg.chat_id_) and not Constructor(msg) then
